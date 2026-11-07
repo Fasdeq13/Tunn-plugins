@@ -1,0 +1,24 @@
+{
+  "id": "midnight",
+  "name": "Midnight",
+  "author": "Tunn",
+  "mode": "dark",
+  "dark": {
+    "primary": "#8AB4FF",
+    "onPrimary": "#0A1B3D",
+    "primaryContainer": "#1F3566",
+    "onPrimaryContainer": "#D8E4FF",
+    "background": "#0B1020",
+    "surface": "#121A30",
+    "onSurface": "#E4E9F7",
+    "surfaceVariant": "#1D2745",
+    "onSurfaceVariant": "#B5BED6",
+    "container": "#172140",
+    "outline": "#3A4670"
+  },
+  "tune": {
+    "uiRadius": 110,
+    "cardStyle": 0,
+    "swStyle": 1
+  }
+}

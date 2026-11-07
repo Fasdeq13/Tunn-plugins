@@ -1,0 +1,44 @@
+{
+  "id": "tunn-ru-apps",
+  "name": "Банки и госуслуги мимо VPN",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Приложения банков, Госуслуги, маркетплейсы и такси исключаются из VPN целиком: банки часто блокируют вход с иностранного IP.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "bypassApps": [
+      "ru.sberbankmobile",
+      "ru.sberbank.sberbankid",
+      "com.idamob.tinkoff.android",
+      "ru.vtb24.mobilebanking.android",
+      "ru.alfabank.mobile.android",
+      "ru.gazprombank.android.mobilebank.app",
+      "ru.raiffeisennews",
+      "ru.rostel",
+      "ru.mts.mtsmoney",
+      "ru.ozon.app.android",
+      "com.wildberries.ru",
+      "com.avito.android",
+      "ru.yandex.taxi",
+      "ru.yandex.yandexmaps",
+      "ru.dublgis.dgismobile",
+      "ru.cian.main",
+      "ru.hh.android",
+      "com.yandex.bank"
+    ],
+    "fromSettings": {
+      "bypassApps": "apps"
+    }
+  },
+  "settings": [
+    {
+      "key": "apps",
+      "type": "text",
+      "title": "Свои приложения (пакеты через запятую)",
+      "placeholder": "ru.sberbankmobile, com.example.app",
+      "default": ""
+    }
+  ]
+}

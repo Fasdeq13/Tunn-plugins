@@ -1,0 +1,34 @@
+{
+  "id": "tunn-messengers-only",
+  "name": "Только мессенджеры",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "VPN работает только для Telegram, Discord, WhatsApp, Signal, Viber и выбранных вами приложений. Всё остальное идёт напрямую.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "onlyApps": [
+      "org.telegram.messenger",
+      "org.telegram.messenger.web",
+      "org.thunderdog.challegram",
+      "com.discord",
+      "com.whatsapp",
+      "com.whatsapp.w4b",
+      "org.thoughtcrime.securesms",
+      "com.viber.voip"
+    ],
+    "fromSettings": {
+      "onlyApps": "apps"
+    }
+  },
+  "settings": [
+    {
+      "key": "apps",
+      "type": "text",
+      "title": "Ещё приложения (пакеты через запятую)",
+      "placeholder": "com.example.chat",
+      "default": ""
+    }
+  ]
+}

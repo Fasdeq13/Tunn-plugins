@@ -1,0 +1,68 @@
+{
+  "id": "tunn-ad-shield",
+  "name": "Блокировка рекламы и трекеров",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Блокирует известные рекламные сети, счётчики и SDK-трекеры на уровне домена для всех приложений.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "blockDomains": [
+      "doubleclick.net",
+      "googlesyndication.com",
+      "googleadservices.com",
+      "google-analytics.com",
+      "adservice.google.com",
+      "adnxs.com",
+      "adsrvr.org",
+      "criteo.com",
+      "criteo.net",
+      "taboola.com",
+      "outbrain.com",
+      "scorecardresearch.com",
+      "quantserve.com",
+      "moatads.com",
+      "adcolony.com",
+      "applovin.com",
+      "unityads.unity3d.com",
+      "mopub.com",
+      "inmobi.com",
+      "chartboost.com",
+      "vungle.com",
+      "supersonicads.com",
+      "startapp.com",
+      "an.facebook.com",
+      "adjust.com",
+      "appsflyer.com",
+      "mc.yandex.ru",
+      "mc.yandex.com",
+      "an.yandex.ru",
+      "yandexadexchange.net",
+      "ad.mail.ru",
+      "counter.yadro.ru",
+      "amazon-adsystem.com",
+      "pubmatic.com",
+      "rubiconproject.com",
+      "openx.net",
+      "smaato.net",
+      "bidswitch.net",
+      "casalemedia.com",
+      "adform.net",
+      "serving-sys.com",
+      "tapjoy.com"
+    ],
+    "fromSettings": {
+      "blockDomains": "extra"
+    }
+  },
+  "settings": [
+    {
+      "key": "extra",
+      "type": "text",
+      "title": "Свои домены для блокировки",
+      "placeholder": "ads.example.com",
+      "default": ""
+    }
+  ]
+}

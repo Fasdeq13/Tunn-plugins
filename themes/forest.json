@@ -1,0 +1,24 @@
+{
+  "id": "forest",
+  "name": "Forest",
+  "author": "Tunn",
+  "mode": "dark",
+  "dark": {
+    "primary": "#7FD6A0",
+    "onPrimary": "#05261A",
+    "primaryContainer": "#1E4D38",
+    "onPrimaryContainer": "#C9F2DA",
+    "background": "#0E1512",
+    "surface": "#151F1A",
+    "onSurface": "#E2EEE7",
+    "surfaceVariant": "#22332A",
+    "onSurfaceVariant": "#B3C7BB",
+    "container": "#1B2A22",
+    "outline": "#3F5A4B"
+  },
+  "tune": {
+    "uiRadius": 120,
+    "cardStyle": 1,
+    "swStyle": 1
+  }
+}

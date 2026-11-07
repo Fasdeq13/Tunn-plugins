@@ -1,0 +1,24 @@
+{
+  "id": "graphite",
+  "name": "Graphite",
+  "author": "Tunn",
+  "mode": "dark",
+  "dark": {
+    "primary": "#9AA5B8",
+    "onPrimary": "#10151F",
+    "primaryContainer": "#2E3647",
+    "onPrimaryContainer": "#DDE3EF",
+    "background": "#16181D",
+    "surface": "#1D2026",
+    "onSurface": "#E6E8EC",
+    "surfaceVariant": "#2A2E37",
+    "onSurfaceVariant": "#B2B8C4",
+    "container": "#23272F",
+    "outline": "#454B58"
+  },
+  "tune": {
+    "uiRadius": 60,
+    "cardStyle": 2,
+    "swStyle": 2
+  }
+}

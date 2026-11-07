@@ -1,0 +1,51 @@
+{
+  "id": "tunn-ai-via-vpn",
+  "name": "ИИ-сервисы только через VPN",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "ChatGPT, Claude, Gemini, Perplexity, Grok, Hugging Face и другие ИИ-сервисы всегда идут через VPN, даже если рядом включено «Россия напрямую».",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "proxyDomains": [
+      "openai.com",
+      "chatgpt.com",
+      "oaistatic.com",
+      "oaiusercontent.com",
+      "anthropic.com",
+      "claude.ai",
+      "claudeusercontent.com",
+      "gemini.google.com",
+      "aistudio.google.com",
+      "generativelanguage.googleapis.com",
+      "perplexity.ai",
+      "x.ai",
+      "grok.com",
+      "huggingface.co",
+      "midjourney.com",
+      "mistral.ai",
+      "deepseek.com",
+      "poe.com",
+      "character.ai",
+      "copilot.microsoft.com",
+      "githubcopilot.com",
+      "cursor.com",
+      "elevenlabs.io",
+      "runwayml.com",
+      "suno.com"
+    ],
+    "fromSettings": {
+      "proxyDomains": "extra"
+    }
+  },
+  "settings": [
+    {
+      "key": "extra",
+      "type": "text",
+      "title": "Свои домены только через VPN",
+      "placeholder": "example.ai",
+      "default": ""
+    }
+  ]
+}

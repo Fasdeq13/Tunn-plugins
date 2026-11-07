@@ -1,0 +1,24 @@
+{
+  "id": "mono-amoled",
+  "name": "Mono AMOLED",
+  "author": "Tunn",
+  "mode": "dark",
+  "dark": {
+    "primary": "#FFFFFF",
+    "onPrimary": "#000000",
+    "primaryContainer": "#2A2A2A",
+    "onPrimaryContainer": "#FFFFFF",
+    "background": "#000000",
+    "surface": "#000000",
+    "onSurface": "#F2F2F2",
+    "surfaceVariant": "#141414",
+    "onSurfaceVariant": "#A8A8A8",
+    "container": "#0D0D0D",
+    "outline": "#333333"
+  },
+  "tune": {
+    "uiRadius": 100,
+    "cardStyle": 1,
+    "swStyle": 1
+  }
+}

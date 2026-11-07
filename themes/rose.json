@@ -1,0 +1,24 @@
+{
+  "id": "rose",
+  "name": "Rose",
+  "author": "Tunn",
+  "mode": "light",
+  "light": {
+    "primary": "#B83266",
+    "onPrimary": "#FFFFFF",
+    "primaryContainer": "#FFD9E5",
+    "onPrimaryContainer": "#3E001C",
+    "background": "#FFF8F9",
+    "surface": "#FFFFFF",
+    "onSurface": "#2A1820",
+    "surfaceVariant": "#F6E3EA",
+    "onSurfaceVariant": "#5A424B",
+    "container": "#FBEFF3",
+    "outline": "#D9B8C4"
+  },
+  "tune": {
+    "uiRadius": 130,
+    "cardStyle": 0,
+    "swStyle": 1
+  }
+}

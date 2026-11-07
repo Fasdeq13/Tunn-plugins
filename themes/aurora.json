@@ -1,0 +1,25 @@
+{
+  "id": "aurora",
+  "name": "Aurora",
+  "author": "Tunn",
+  "mode": "dark",
+  "dark": {
+    "primary": "#5EEAD4",
+    "onPrimary": "#012B26",
+    "primaryContainer": "#124D49",
+    "onPrimaryContainer": "#C8FBF2",
+    "background": "#0A0F1F",
+    "surface": "#101831",
+    "onSurface": "#E6EEFF",
+    "surfaceVariant": "#1B2850",
+    "onSurfaceVariant": "#B3C0E3",
+    "container": "#16204A",
+    "outline": "#35467F",
+    "secondary": "#A78BFA"
+  },
+  "tune": {
+    "uiRadius": 140,
+    "cardStyle": 0,
+    "swStyle": 1
+  }
+}

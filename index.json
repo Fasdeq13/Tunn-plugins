@@ -1,0 +1,85 @@
+{
+  "plugins": [
+    {
+      "id": "tunn-ad-shield",
+      "name": "Блокировка рекламы и трекеров",
+      "version": "1.0.0",
+      "description": "Блокирует известные рекламные сети, счётчики и SDK-трекеры на уровне домена для всех приложений.",
+      "file": "dist/tunn-ad-shield-1.0.0.zip",
+      "sha256": "b9a26d377520c0deecfb4d03cea399dd74b1907df0c0c54d09cda41ac3d3c672",
+      "size": 2711
+    },
+    {
+      "id": "tunn-ai-via-vpn",
+      "name": "ИИ-сервисы только через VPN",
+      "version": "1.0.0",
+      "description": "ChatGPT, Claude, Gemini, Perplexity, Grok, Hugging Face и другие ИИ-сервисы всегда идут через VPN, даже если рядом включено «Россия напрямую».",
+      "file": "dist/tunn-ai-via-vpn-1.0.0.zip",
+      "sha256": "6d0b33a19ce47c0b1d34625c2545042bd0fafe38008553f2fe6e81dca190ae0e",
+      "size": 2182
+    },
+    {
+      "id": "tunn-gaming-direct",
+      "name": "Игровые загрузки напрямую",
+      "version": "1.0.0",
+      "description": "Загрузка игр из Steam, Epic, Battle.net, Riot идёт мимо VPN на полной скорости провайдера: не тратит трафик VPN и не упирается в его скорость.",
+      "file": "dist/tunn-gaming-direct-1.0.0.zip",
+      "sha256": "82b5fc4d0815d5eb4107258bea6c4dd7bdcfbed3d1937006ae9ca48a41489050",
+      "size": 2090
+    },
+    {
+      "id": "tunn-local-network",
+      "name": "Домашняя сеть напрямую",
+      "version": "1.0.0",
+      "description": "Роутер, NAS, принтер, телевизор и Chromecast остаются доступны при включённом VPN: локальные адреса и имена .local/.lan идут напрямую.",
+      "file": "dist/tunn-local-network-1.0.0.zip",
+      "sha256": "0c6b2445cb8760eab4b6ed54c5a1cfad14febb8540658d01139213ba6949718b",
+      "size": 2018
+    },
+    {
+      "id": "tunn-messengers-only",
+      "name": "Только мессенджеры",
+      "version": "1.0.0",
+      "description": "VPN работает только для Telegram, Discord, WhatsApp, Signal, Viber и выбранных вами приложений. Всё остальное идёт напрямую.",
+      "file": "dist/tunn-messengers-only-1.0.0.zip",
+      "sha256": "356ebf29560f881dad1c0ed5c8b8110b6765c34cf9812562b7fe333fc4767f9b",
+      "size": 1937
+    },
+    {
+      "id": "tunn-ru-apps",
+      "name": "Банки и госуслуги мимо VPN",
+      "version": "1.0.0",
+      "description": "Приложения банков, Госуслуги, маркетплейсы и такси исключаются из VPN целиком: банки часто блокируют вход с иностранного IP.",
+      "file": "dist/tunn-ru-apps-1.0.0.zip",
+      "sha256": "64415de89cd44dc9ec9b9ef2bcc270d874d1e07d7ffd540b683b2dffd42c3cf2",
+      "size": 2318
+    },
+    {
+      "id": "tunn-ru-direct",
+      "name": "Россия напрямую",
+      "version": "1.0.0",
+      "description": "Российские сайты и сервисы (.ru, .su, .рф, Яндекс, VK, Mail.ru, 2ГИС и др.) и локальная сеть идут мимо VPN: быстрее, и не ломаются сервисы, которые блокируют зарубежные адреса.",
+      "file": "dist/tunn-ru-direct-1.0.0.zip",
+      "sha256": "18e4f83d54777760bfc831bc58e74476fee1be0401b13372a73286e9a9150005",
+      "size": 2409
+    },
+    {
+      "id": "tunn-telemetry-block",
+      "name": "Блокировка телеметрии",
+      "version": "1.0.0",
+      "description": "Режет телеметрию производителей телефонов (Xiaomi, Samsung) и аналитику приложений (Crashlytics, Mixpanel, Amplitude, Sentry).",
+      "file": "dist/tunn-telemetry-block-1.0.0.zip",
+      "sha256": "4fa94864436ca177f3712df2e731b1de2a4113410986ecaa7ca59e619db3eda2",
+      "size": 2198
+    },
+    {
+      "id": "tunn-torrents-direct",
+      "name": "Торрент-клиенты мимо VPN",
+      "version": "1.0.0",
+      "description": "Торрент-клиенты исключаются из VPN: не загружают туннель и не расходуют трафик подписки.",
+      "file": "dist/tunn-torrents-direct-1.0.0.zip",
+      "sha256": "6452157d94eff70814edd7c355277b9eb4c0ef648259b67f435d060da0b6418f",
+      "size": 1782
+    }
+  ]
+}

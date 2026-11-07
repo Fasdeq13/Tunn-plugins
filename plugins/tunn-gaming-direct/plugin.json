@@ -1,0 +1,39 @@
+{
+  "id": "tunn-gaming-direct",
+  "name": "Игровые загрузки напрямую",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Загрузка игр из Steam, Epic, Battle.net, Riot идёт мимо VPN на полной скорости провайдера: не тратит трафик VPN и не упирается в его скорость.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "directDomains": [
+      "steamcontent.com",
+      "steamserver.net",
+      "steamcdn-a.akamaihd.net",
+      "epicgames-download1.akamaized.net",
+      "download.epicgames.com",
+      "fastly-download.epicgames.com",
+      "dist.blizzard.com",
+      "level3.blizzard.com",
+      "blzddist1-a.akamaihd.net",
+      "riotcdn.net",
+      "lol.dyn.riotcdn.net",
+      "ubisoft-download.akamaized.net",
+      "gog-cdn-fastly.gog.com"
+    ],
+    "fromSettings": {
+      "directDomains": "extra"
+    }
+  },
+  "settings": [
+    {
+      "key": "extra",
+      "type": "text",
+      "title": "Свои домены загрузок напрямую",
+      "placeholder": "cdn.example.com",
+      "default": ""
+    }
+  ]
+}

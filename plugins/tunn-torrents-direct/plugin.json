@@ -1,0 +1,36 @@
+{
+  "id": "tunn-torrents-direct",
+  "name": "Торрент-клиенты мимо VPN",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Торрент-клиенты исключаются из VPN: не загружают туннель и не расходуют трафик подписки.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "bypassApps": [
+      "org.proninyaroslav.libretorrent",
+      "com.utorrent.client",
+      "com.utorrent.client.pro",
+      "com.bittorrent.client",
+      "com.delphicoder.flud",
+      "com.delphicoder.flud.paid",
+      "hu.tagsoft.ttorrent.lite",
+      "hu.tagsoft.ttorrent.pro",
+      "com.frostwire.android",
+      "com.vuze.torrent.downloader"
+    ],
+    "fromSettings": {
+      "bypassApps": "apps"
+    }
+  },
+  "settings": [
+    {
+      "key": "apps",
+      "type": "text",
+      "title": "Свои клиенты (пакеты через запятую)",
+      "placeholder": "com.example.torrent",
+      "default": ""
+    }
+  ]
+}

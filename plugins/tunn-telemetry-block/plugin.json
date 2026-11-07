@@ -1,0 +1,48 @@
+{
+  "id": "tunn-telemetry-block",
+  "name": "Блокировка телеметрии",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Режет телеметрию производителей телефонов (Xiaomi, Samsung) и аналитику приложений (Crashlytics, Mixpanel, Amplitude, Sentry).",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "blockDomains": [
+      "data.mistat.xiaomi.com",
+      "tracking.miui.com",
+      "api.ad.xiaomi.com",
+      "sdkconfig.ad.xiaomi.com",
+      "adv.sec.miui.com",
+      "ad.samsungads.com",
+      "samsungads.com",
+      "analytics.samsungknox.com",
+      "gos-api.gos-gsp.io",
+      "metrics.icloud.com",
+      "app-measurement.com",
+      "firebase-settings.crashlytics.com",
+      "crashlytics.com",
+      "sentry.io",
+      "bugsnag.com",
+      "mixpanel.com",
+      "amplitude.com",
+      "segment.io",
+      "hotjar.com",
+      "api.mixpanel.com",
+      "telemetry.microsoft.com",
+      "vortex.data.microsoft.com"
+    ],
+    "fromSettings": {
+      "blockDomains": "extra"
+    }
+  },
+  "settings": [
+    {
+      "key": "extra",
+      "type": "text",
+      "title": "Свои домены для блокировки",
+      "placeholder": "telemetry.example.com",
+      "default": ""
+    }
+  ]
+}

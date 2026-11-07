@@ -1,0 +1,57 @@
+{
+  "id": "tunn-ru-direct",
+  "name": "Россия напрямую",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Российские сайты и сервисы (.ru, .su, .рф, Яндекс, VK, Mail.ru, 2ГИС и др.) и локальная сеть идут мимо VPN: быстрее, и не ломаются сервисы, которые блокируют зарубежные адреса.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "directDomains": [
+      "ru",
+      "su",
+      "xn--p1ai",
+      "yandex.com",
+      "yandex.net",
+      "yastatic.net",
+      "yandexcloud.net",
+      "vk.com",
+      "vk.me",
+      "vkuser.net",
+      "vk-cdn.net",
+      "userapi.com",
+      "mycdn.me",
+      "avito.st",
+      "2gis.com",
+      "2gis.ru"
+    ],
+    "directIps": [
+      "10.0.0.0/8",
+      "172.16.0.0/12",
+      "192.168.0.0/16",
+      "100.64.0.0/10",
+      "169.254.0.0/16"
+    ],
+    "fromSettings": {
+      "directDomains": "domains",
+      "proxyDomains": "proxy"
+    }
+  },
+  "settings": [
+    {
+      "key": "domains",
+      "type": "text",
+      "title": "Свои домены напрямую",
+      "placeholder": "example.com, domain:bank.com",
+      "default": ""
+    },
+    {
+      "key": "proxy",
+      "type": "text",
+      "title": "Исключения: эти домены всё равно через VPN",
+      "placeholder": "example.ru",
+      "default": ""
+    }
+  ]
+}

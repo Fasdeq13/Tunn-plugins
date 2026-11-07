@@ -1,0 +1,48 @@
+{
+  "id": "tunn-local-network",
+  "name": "Домашняя сеть напрямую",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Роутер, NAS, принтер, телевизор и Chromecast остаются доступны при включённом VPN: локальные адреса и имена .local/.lan идут напрямую.",
+  "kinds": [
+    "rules"
+  ],
+  "rules": {
+    "directDomains": [
+      "local",
+      "lan",
+      "home.arpa",
+      "localdomain",
+      "internal"
+    ],
+    "directIps": [
+      "10.0.0.0/8",
+      "172.16.0.0/12",
+      "192.168.0.0/16",
+      "100.64.0.0/10",
+      "169.254.0.0/16",
+      "fc00::/7",
+      "fe80::/10"
+    ],
+    "fromSettings": {
+      "directDomains": "names",
+      "directIps": "ips"
+    }
+  },
+  "settings": [
+    {
+      "key": "names",
+      "type": "text",
+      "title": "Свои локальные имена",
+      "placeholder": "nas.home, printer.lan",
+      "default": ""
+    },
+    {
+      "key": "ips",
+      "type": "text",
+      "title": "Свои сети (CIDR)",
+      "placeholder": "203.0.113.0/24",
+      "default": ""
+    }
+  ]
+}
