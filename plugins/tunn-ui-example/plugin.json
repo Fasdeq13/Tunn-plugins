@@ -1,0 +1,9 @@
+{
+  "id": "tunn-ui-example",
+  "name": "Пример интерфейса (Rust)",
+  "version": "1.0.0",
+  "author": "Tunn",
+  "description": "Минимальный интерфейс на Rust: кнопка подключения и список серверов. Образец для своих интерфейсов.",
+  "kinds": ["ui-native"],
+  "uiNative": { "lib": "libfq_ui_example.so" }
+}

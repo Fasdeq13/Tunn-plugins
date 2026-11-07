@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Replays Tunn's rule merge (Plugins.rules / Links.addPluginRules) over all plugins and checks the combined result."""
 import json, os, re, sys, zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEYS = ["bypassApps", "onlyApps", "directDomains", "proxyDomains", "directIps", "blockDomains"]
@@ -33,16 +31,12 @@ def main():
     ms = load()
     assert len(ms) >= 9, "expected the full set in dist/"
     allr = merge([m for m in ms if m["id"] != "tunn-messengers-only"])
-    # no domain may be both blocked and forced through the VPN
     clash = set(allr["blockDomains"]) & set(allr["proxyDomains"])
     assert not clash, clash
-    # block wins over proxy over direct in Tunn: a direct ru rule must not swallow the ad list silently
     assert "mc.yandex.ru" in allr["blockDomains"] and "ru" in allr["directDomains"]
-    # user settings flow into the rules
     s = merge(ms, {"tunn-ru-apps": {"apps": "com.a.b, com.c.d"}, "tunn-ad-shield": {"extra": "x.test;y.test"}})
     assert "com.a.b" in s["bypassApps"] and "com.c.d" in s["bypassApps"]
     assert "x.test" in s["blockDomains"] and "y.test" in s["blockDomains"]
-    # every zip is a flat archive with a manifest at its root
     for f in os.listdir(os.path.join(ROOT, "dist")):
         if f.endswith(".zip"):
             names = zipfile.ZipFile(os.path.join(ROOT, "dist", f)).namelist()

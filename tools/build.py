@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-"""Validates every plugin against Tunn's installer rules, builds reproducible zips into dist/ and writes index.json."""
 import hashlib, json, os, re, sys, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ALLOWED_EXT = {"json", "so", "js", "css", "png", "svg", "txt", "md", "webp", "jpg"}  # same list as Plugins.install
+ALLOWED_EXT = {"json", "so", "js", "css", "png", "svg", "txt", "md", "webp", "jpg"}
 RULE_KEYS = {"bypassApps", "onlyApps", "directDomains", "proxyDomains", "directIps", "blockDomains"}
 SETTING_TYPES = {"text", "switch", "select", "number"}
 DOMAIN = re.compile(r"^(?:(?:domain|full|keyword|regexp|geosite|ext):)?[^\s,;]+$")
@@ -56,6 +54,10 @@ def build():
         path = os.path.join(plugdir, pid)
         if not os.path.isdir(path): continue
         m = validate(pid, path)
+        ui = m.get("uiNative")
+        if ui and not os.path.isfile(os.path.join(path, ui["lib"])):
+            print("skip", pid, "(no", ui["lib"], "- run tools/build_ui_android.sh)")
+            continue
         out = os.path.join(dist, f"{pid}-{m['version']}.zip")
         with zipfile.ZipFile(out, "w", zipfile.ZIP_STORED) as z:
             for name in sorted(os.listdir(path)):
@@ -66,10 +68,17 @@ def build():
                 info.external_attr = 0o644 << 16
                 z.writestr(info, open(os.path.join(path, name), "rb").read())
         data = open(out, "rb").read()
-        index.append({"id": pid, "name": m["name"], "version": m["version"], "description": m["description"],
+        index.append({"id": pid, "name": m["name"], "version": m["version"], "kinds": m.get("kinds", []), "description": m["description"],
                       "file": f"dist/{os.path.basename(out)}", "sha256": hashlib.sha256(data).hexdigest(), "size": len(data)})
         print("built", os.path.basename(out))
-    json.dump({"plugins": index}, open(os.path.join(ROOT, "index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    th = []
+    for f in sorted(os.listdir(os.path.join(ROOT, "themes"))):
+        if not f.endswith(".json"): continue
+        raw = open(os.path.join(ROOT, "themes", f), "rb").read()
+        t = json.loads(raw)
+        th.append({"id": t["id"], "name": t.get("name", t["id"]), "version": str(t.get("version", "1")), "description": "Тема оформления",
+                   "file": f"themes/{f}", "sha256": hashlib.sha256(raw).hexdigest(), "size": len(raw)})
+    json.dump({"plugins": index, "themes": th}, open(os.path.join(ROOT, "index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     open(os.path.join(ROOT, "index.json"), "a").write("\n")
 
 
